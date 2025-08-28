@@ -1,0 +1,345 @@
+:root {
+    /* Color palette based on the provided images */
+    --bg-primary: #f0f8f0; /* Light green/off-white background */
+    --navbar-bg: #ffffff; /* White for navbar background */
+    --hero-bg: linear-gradient(180deg, #1e8449 0%, #013220 100%); /* Hero section gradient */
+    --text-primary: #000000; /* Black text for readability */
+    --text-secondary: #666666; /* Lighter grey text */
+    --accent-green: #28a745; /* Standard green for buttons/accents */
+    --accent-blue: #007bff; /* Blue for copy icons/numbers */
+    --accent-red: #dc3545; /* Red for heart icons */
+    --card-bg: #ffffff; /* White for card background */
+    --history-bg: #e6f7e6; /* Very light green for history section */
+    --history-text: #333333; /* Dark text for history */
+    --border-color: #e0e0e0; /* Light border for cards */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--navbar-bg);
+    color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1e8449;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-container {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.heart-container {
+    background-color: #f5fff5;
+    border-color: #f0f0f0;
+}
+
+.heart-container .fas {
+    color: var(--accent-red);
+}
+
+.coin-container {
+    background-color: #f5fff5;
+    border-color: #f0f0f0;
+}
+
+.coin-container img {
+    height: 16px;
+}
+
+.coin-container span {
+    color: var(--text-primary); /* Changed to match the image, gold color will be applied by JS */
+}
+
+.copy-container {
+    background-color: var(--accent-green);
+    color: white;
+    border-color: var(--accent-green);
+    padding: 0.5rem 1.5rem;
+}
+
+.copy-container .fas {
+    color: white;
+}
+
+.hero-section {
+    background: var(--hero-bg);
+    text-align: center;
+    padding: 2rem 1rem;
+    color: white;
+}
+
+.hero-logo {
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.hero-slogan {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.main-content-container {
+    padding: 2rem;
+    background-color: var(--bg-primary);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header img {
+    height: 40px;
+    background-color: #e0f0e0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f0f0f0;
+    transition: color 0.2s;
+}
+
+.heart-icon.liked {
+    color: var(--accent-red);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.card-sub-name {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.card-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.category-badge {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.card-buttons button {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.copy-btn {
+    background-color: #f8f8f8;
+    color: var(--text-primary);
+}
+
+.copy-btn .fa-copy {
+    color: var(--text-secondary); /* Changed to black/primary text color */
+    margin-right: 0.5rem;
+}
+
+.copy-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.call-btn {
+    background-color: var(--accent-green);
+    color: white;
+}
+
+.call-btn .fa-phone-alt { color: white; margin-right: 0.5rem; }
+
+.call-btn:hover {
+    background-color: #218838;
+}
+
+.history-section {
+    background-color: var(--history-bg);
+    color: var(--history-text);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.history-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.history-title .fa-history {
+    margin-right: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.clear-history-btn {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear-history-btn:hover {
+    background-color: #218838;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.history-item {
+    border-left: 3px solid var(--accent-green);
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--history-text);
+}
+
+.history-item .service-number {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.history-item .call-time {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    float: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    .nav-icons {
+        margin-top: 1rem;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-slogan {
+        font-size: 0.9rem;
+    }
+    .main-content-container {
+        padding: 1rem;
+    }
+}
