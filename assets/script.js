@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sub_name: "Brac",
             number: "16445",
             category: "NGO",
-            icon: "https://i.ibb.co/v32kQYg/brac-logo.png",
+            icon: "assets/brac.png",
         },
         {
             name: "Bangladesh Railway Helpline",
