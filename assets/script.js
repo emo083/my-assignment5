@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sub_name: "Bangladesh Railway",
             number: "163",
             category: "Travel",
-            icon: "https://i.ibb.co/n6m14B8/train.png",
+            icon: "assets/Bangladesh-Railway.png",
         },
     ];
 
