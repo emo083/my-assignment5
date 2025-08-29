@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sub_name: "Electricity Outage",
             number: "16216",
             category: "Electricity",
-            icon: "https://i.ibb.co/yWfK72b/electric-tower-1.png",
+            icon: "assets/emergency.png",
         },
         {
             name: "Brac Helpline",
