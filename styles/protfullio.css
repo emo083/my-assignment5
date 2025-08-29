@@ -1,17 +1,17 @@
 :root {
-    /* Color palette based on the provided images */
-    --bg-primary: #f0f8f0; /* Light green/off-white background */
-    --navbar-bg: #ffffff; /* White for navbar background */
-    --hero-bg: linear-gradient(180deg, #1e8449 0%, #013220 100%); /* Hero section gradient */
-    --text-primary: #000000; /* Black text for readability */
-    --text-secondary: #666666; /* Lighter grey text */
-    --accent-green: #28a745; /* Standard green for buttons/accents */
-    --accent-blue: #007bff; /* Blue for copy icons/numbers */
-    --accent-red: #dc3545; /* Red for heart icons */
-    --card-bg: #ffffff; /* White for card background */
-    --history-bg: #e6f7e6; /* Very light green for history section */
-    --history-text: #333333; /* Dark text for history */
-    --border-color: #e0e0e0; /* Light border for cards */
+    
+    --bg-primary: #f0f8f0; 
+    --navbar-bg: #ffffff; 
+    --hero-bg: linear-gradient(180deg, #1e8449 0%, #013220 100%); 
+    --text-primary: #000000; 
+    --text-secondary: #666666; 
+    --accent-green: #28a745; 
+    --accent-blue: #007bff; 
+    --accent-red: #dc3545; 
+    --card-bg: #ffffff; 
+    --history-bg: #e6f7e6; 
+    --history-text: #333333; 
+    --border-color: #e0e0e0; 
 }
 
 * {
